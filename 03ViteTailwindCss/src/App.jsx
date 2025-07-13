@@ -12,6 +12,7 @@ function App() {
       <h1 className='text-red-500 '>Hello my name is abdul rehman.</h1>
       <Card username='Abdul rehman' btnvalue="Abdul profile" />
       <Card username='Abid' btnvalue="Abid profile" />
+      <Card username="Haris" btnvalue="Abid profile" />
     </>
   )
 }
