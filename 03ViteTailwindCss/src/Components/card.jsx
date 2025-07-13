@@ -1,6 +1,12 @@
 import React from 'react'
 
-function Card({username,btnvalue="View Profile →"}) {
+function myname(){
+    return(
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, debitis?"
+    )
+}
+
+function Card({username,btnvalue="View Profile →",Details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, debitis?"}) {
      
     return (
        
@@ -13,7 +19,7 @@ function Card({username,btnvalue="View Profile →"}) {
       <div className="text-white">
         <h2 className="text-lg font-semibold">{username}</h2>
         <p className="text-sm text-gray-300 mt-1">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, debitis?
+          {Details}
         </p>
         <button className="mt-4 inline-flex items-center text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-md hover:bg-white/20 transition">
           {btnvalue }
