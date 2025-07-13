@@ -13,6 +13,7 @@ function App() {
       <Card username='Abdul rehman' btnvalue="Abdul profile" />
       <Card username='Abid' btnvalue="Abid profile" />
       <Card username="Haris" btnvalue="Abid profile" />
+      <Card username="Abdullah" btnvalue="Abid profile" />
     </>
   )
 }
