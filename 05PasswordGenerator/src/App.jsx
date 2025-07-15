@@ -5,9 +5,9 @@ import './App.css'
 
 function App() {
 
-
-
-
+const c1=document.getElementById("c1")
+const c2=document.getElementById("c2")
+const lengthinput=document.getElementById("lengthinput")
   const CopyBtn = document.getElementById("CopyBtn")
   const [length, setLength] = useState(8)
   const [number, setNumber] = useState(false)
@@ -21,10 +21,14 @@ function App() {
     window.navigator.clipboard.writeText(password)
     CopyBtn.innerHTML = "Copied"
     CopyBtn.disabled = true
-    CopyBtn.classList.add("opacity-50")
+    CopyBtn.classList.add("opacity-50","bg-red-500")
     CopyBtn.classList.remove("hover:opacity-35")
     mainInput.classList.remove("sm:w-[55%]")
     mainInput.classList.add("sm:w-[50%]")
+    lengthinput.disabled=true
+    c1.disabled=true
+    c2.disabled=true
+    
   }, [password])
   // new password
   function NewPassword() {
@@ -84,7 +88,7 @@ function App() {
               className="sm:w-[55%] md:flex-1 rounded px-2  py-2 sm:py-1 outline-none border border-gray-300"
             />
             <div className='flex  justify-center items-center gap-3'>
-              <button id='CopyBtn' onClick={copyPasswordfn} className="bg-blue-500 hover:opacity-35 text-white sm:py-1 rounded px-4 py-2">
+              <button id='CopyBtn'  onClick={copyPasswordfn} className="bg-blue-500 hover:opacity-35 text-white sm:py-1 rounded px-4 py-2">
                 Copy
               </button>
               <button id='CopyBtn' onClick={NewPassword} className=" right-2 bg-green-500 hover:opacity-35 text-white sm:py-1 rounded px-4 py-2">
@@ -99,6 +103,9 @@ function App() {
             <div className=' '>
               <label className='text-white' >Length : <span className='text-red-300'><input
                 placeholder='08'
+                onFocus={()=>{
+                  CopyBtn.disabled = true
+                }}
                 id='lengthinput'
                 onChange={(e) => {
                   setLength(e.target.value)
@@ -110,6 +117,7 @@ function App() {
             </div>
             <div className='flex items-center gap-2'>
               <input type="checkbox"
+              id='c1'
                 className='cursor-pointer w-5 h-5 '
                 onChange={() => {
                   setNumber((prev) => !prev)
@@ -118,7 +126,9 @@ function App() {
               <label className='text-white' >Number</label>
             </div>
             <div className='flex items-center gap-2'>
+              
               <input type="checkbox"
+              id='c2'
                 className='cursor-pointer w-5 h-5 '
                 onChange={() => {
                   setCharacterr((prev) => !prev)
