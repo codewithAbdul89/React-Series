@@ -6,7 +6,7 @@ function useCurrencyInfo(currency) {
         fetch(url)
             .then((res) => res.json())
             .then((res) => setData(res.conversion_rates || {}))
-            .catch((err) => console.log("Something wring in during fetching API.......", err))
+            .catch((err) => console.log("Something wrong in during fetching API.......", err))
     }, [currency])
     return data
 }
