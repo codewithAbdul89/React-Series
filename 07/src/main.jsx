@@ -1,10 +1,60 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import './index.css';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
+import Layout from './Layout';
+import Home from './Components/Home.jsx/Home';
+import About from './Components/About/About';
+import Contact from './Components/Contact/Contact';
+import User from './Components/User/User';
+import GitHub, { gitHubInfoLoader } from './Components/GitHub/GitHub';
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+
+
+
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<Layout />}>
+      <Route path='/' element={<Home />} />
+      <Route path='/About' element={<About />} />
+      <Route path='/Contact' element={<Contact />} />
+      <Route path='User/:USERID' element={<User />} />
+      <Route loader={
+        gitHubInfoLoader
+      }
+        path='/GitHub'
+        element={<GitHub />}
+      />
+
+
+
+ 
+
+    </Route>
+  )
 )
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+
+    <RouterProvider router={router} fallbackElement={<p>Loading...</p>} />
+  </React.StrictMode>
+
+);
+
+
+
+
+
+
+
+{/* <Route path='contact' element={<Contact />} />
+      <Route path='user/:userid' element={<User />} />
+      <Route 
+      loader={githubInfoLoader}
+      path='github' 
+      element={<Github />}
+       /> */}
