@@ -51,10 +51,3 @@ root.render(
 
 
 
-{/* <Route path='contact' element={<Contact />} />
-      <Route path='user/:userid' element={<User />} />
-      <Route 
-      loader={githubInfoLoader}
-      path='github' 
-      element={<Github />}
-       /> */}
