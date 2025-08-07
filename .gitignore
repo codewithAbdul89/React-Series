@@ -1,2 +1,20 @@
 # Local Netlify folder
 .netlify
+09/.gitignore
+09/eslint.config.js
+09/index.html
+09/package-lock.json
+09/package.json
+09/postcss.config.js
+09/README.md
+09/tailwind.config.js
+09/vite.config.js
+09/src/App.css
+09/src/App.jsx
+09/src/contextNotes.md
+09/src/index.css
+09/src/main.jsx
+09/src/Components/Card.jsx
+09/src/Components/ThemeBtn.jsx
+09/src/Contexts/Theme.jsx
+09/src/assets/react.svg
