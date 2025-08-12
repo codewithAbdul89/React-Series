@@ -1,0 +1,19 @@
+{
+  "name": "new-folder",
+  "version": "1.0.30001734",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss -i ./folder/input.css -o ./folder/output.css --watch",
+    "build": "npx tailwindcss -i ./folder/input.css -o ./folder/output.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17"
+  }
+}
