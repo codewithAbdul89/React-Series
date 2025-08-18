@@ -154,3 +154,11 @@ npm run build
 ⦁ file content (/* /index.html 200)
 ⦁ keep Redirects file out of src
 ⦁ replace the build script in pakage.json with this:" "build": "vite build && xcopy _redirects dist\\_redirects* /Y""
+
+
+
+
+
+07-For redux Tolkit installation:
+⦁npm install @reduxjs/toolkit react-redux
+⦁npm install react-redux
