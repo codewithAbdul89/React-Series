@@ -1,4 +1,3 @@
-// Slice.js
 import { nanoid, createSlice } from "@reduxjs/toolkit";
 
 const loadFromLocalStorage = () => {

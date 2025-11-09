@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Abdul",
+      "classs": "14",
+      "email": "muabdulrehman58@gmail.com"
+    },
+    {
+      "id": "2",
+      "name": "Abid",
+      "classs": "23",
+      "email": "abid@gmail.com"
+    },
+    {
+      "id": "3",
+      "name": "Ali",
+      "classs": "30",
+      "email": "ali@gmail.com"
+    },
+    {
+      "id": "4",
+      "name": "ahad",
+      "classs": "19",
+      "email": "ahad@gmail.com"
+    }
+  ]
+}

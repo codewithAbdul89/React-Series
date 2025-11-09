@@ -169,3 +169,10 @@ npm run build
 
 08- for multipke
  npm i @reduxjs/toolkit react-redux react-router-dom appwrite @tinymce/tinymce-react html-react-parser react-hook-form
+
+
+ 09-For JSON Server:
+ i-npm install --save json-server
+ii-For running:npx json-server --watch db.json --port 5000
+
+
