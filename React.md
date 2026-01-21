@@ -122,27 +122,26 @@ Add the below three lines in it
 module.exports = {
   content: [
     "./index.html",
-    "./**/*.html",
-     "./*.js",   
+    "./src/**/*.{html,js,ts,jsx,tsx}",
     "./folder/**/*.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   safelist: [
-    'max-h-[1000px]' // 👈 Tells Tailwind to always generate this class
+    "max-h-[1000px]",
   ],
-  darkMode: 'class',
-  theme: { 
+  darkMode: "class",
+  theme: {
     extend: {},
     screens: {
-      sm: { max: '768px' },
-      md: '769px',
-      lg: '1024px',
-      xl: '1280px',
-      '2xl': '1536px',
+      sm: { max: "768px" },
+      md: "769px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
     },
   },
   plugins: [],
-}
+};
+
 
 
 More
@@ -168,11 +167,12 @@ npm run build
 
 
 08- for multipke
- npm i @reduxjs/toolkit react-redux react-router-dom appwrite @tinymce/tinymce-react html-react-parser react-hook-form
+  npm i @reduxjs/toolkit react-redux react-router-dom appwrite @tinymce/tinymce-react html-react-parser react-hook-form
 
 
  09-For JSON Server:
  i-npm install --save json-server
-ii-For running:npx json-server --watch db.json --port 5000
+ii-For running:
+npx json-server --watch db.json --port 5000
 
 
