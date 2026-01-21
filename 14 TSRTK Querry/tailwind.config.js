@@ -1,13 +1,12 @@
 module.exports = {
   content: [
     "./index.html",
-    "./**/*.html",
-     "./*.js",   
-    "./folder/**/*.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./folder//*.html",           // your custom HTML folder
+    "./src//*.{js,ts,jsx,tsx}",   // all React/JS/TS files
+    "./*.js"                        // top-level JS files (optional)
   ],
   safelist: [
-    'max-h-[1000px]' // 👈 Tells Tailwind to always generate this class
+    'max-h-[1000px]' // ensures this class is always generated
   ],
   darkMode: 'class',
   theme: { 
@@ -21,4 +20,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};
