@@ -40,8 +40,8 @@ const lengthinput=document.getElementById("lengthinput")
 
     let str = "ABCDEFGHIKLMNOPQRSTUVWXYZabcdefghijklmonpqrstuvwxyz"
 
-    if (number) str += "1234567890"
-    if (character) str += "!@#$%^&*()_{}[]()!@#$%^&*()_{}[]()"
+    if (number) str =str= "1234567890"
+    if (character) str =str+ "!@#$%^&*()_{}[]()!@#$%^&*()_{}[]()"
 
     for (let i = 1; i <= length; i++) {
       let char = Math.floor(Math.random() * str.length + 1)

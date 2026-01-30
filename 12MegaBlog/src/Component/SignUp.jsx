@@ -91,7 +91,7 @@ function SignUp() {
           <div className="flex flex-col gap-1">
             <input
               type="text"
-              name="name"
+              name="text"
               value={formData.name}
               onChange={handleInputChange}
               placeholder="Enter your name"
