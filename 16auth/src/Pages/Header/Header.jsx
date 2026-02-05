@@ -94,7 +94,7 @@ function Header() {
                             onClick={() => setOpenMenu(false)}
                             className={({ isActive }) => `inline-block duration-300 transition-all ease-in  sm:italic px-6 py-[9px] md:hover:scale-[1.1] sm:p-0 
                             rounded-full  sm:bg-brand-cream  sm:font-bold sm:border-b-2 border-white sm:w-full  sm:rounded-lg sm:shadow sm:text-center 
-                            ${isActive ? " sm:text-brand-brown font-bold bg-brand-brown text-white" : "sm:text-brand-gold text-brand-gold/80  bg-white"}
+                            ${isActive ? "transition duration-300 sm:text-brand-brown font-bold bg-brand-brown text-white" : "sm:text-brand-gold text-brand-gold/80  bg-white"}
                             `}
                         >{items.name}</NavLink>
 

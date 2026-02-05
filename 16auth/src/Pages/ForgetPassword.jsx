@@ -17,7 +17,7 @@ function ForgetPassword() {
         dispatch(setLoading())
         try {
             await sendPasswordResetEmail(auth, data.email, {
-                url: "http://localhost:5173/sigin",
+                url: "https://personal-web1.netlify.app/signin",
                 handleCodeInApp: false,
             })
             dispatch(showPopup({
@@ -47,7 +47,7 @@ function ForgetPassword() {
     return (
         <div className=" py-10 bg-[linear-gradient(135deg,#f7f7f2_0%,#f3d6d6_40%,#f2e1c7_75%,#fafafa_100%)] w-full flex justify-center items-center h-screen sm:relative">
             <div className='bg-white/60 sm:bg-transparent rounded-xl sm:shadow-none p-5 sm:p-[2px] shadows-2xl w-[80%] sm:w-[100%]  sm:absolute sm:top-[20%] '>
-                <p className="text-center font-bold text-5xl sm:text-4xl pb-2 text-violet-500 sm:font-bold sm:italic">Reset Password</p>
+                <p className="text-center font-bold text-5xl sm:text-4xl pb-2 text-violet-500 sm:font-bold italic">Reset Password</p>
                 <hr className="border-[1.2px]  border-black/30 sm:border-white w-full" />
                 <form
                     onSubmit={handleSubmit(getFormData)}
