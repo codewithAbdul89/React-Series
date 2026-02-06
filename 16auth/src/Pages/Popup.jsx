@@ -46,7 +46,7 @@ const Popup = () => {
             {/* Close Button */}
             <button
                 onClick={() => dispatch(hidePopup())}
-                className="absolute top-0 right-3 text-[40px] font-bold hover:opacity-70 z-50"
+                className="absolute top-0 right-1 text-[40px] font-bold hover:opacity-70 z-50"
             >
                 ×
             </button>

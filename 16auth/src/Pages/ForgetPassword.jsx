@@ -21,7 +21,7 @@ function ForgetPassword() {
                 handleCodeInApp: false,
             })
             dispatch(showPopup({
-                message: "Password reset email sent! Check your inbox.",
+                message: "If an account with this email exists, you’ll receive an email to reset your password shortly. Please check your inbox or spam folder.",
                 type: "success",
             }));
             reset()
