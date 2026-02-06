@@ -1,6 +1,8 @@
 import { githubIcon } from "../assets/Icons"
+import { useScrollAnimation } from "../Components/useScrollAnimation"
 
 function Project() {
+  useScrollAnimation();
 
   const projectDetails = [
     {
@@ -102,7 +104,9 @@ function Project() {
         <div className=' mt-16 grid md:grid-cols-3 grid-cols-1 gap-8 md:justify-items-center'>
           {
             projectDetails?.map((projects, index) => (
-              <div key={index} className='bg-white/70 hover:shadow-md transition hover:-translate-y-2 h-auto w-80 rounded-xl sm:w-full p-1 '>
+              <div key={index}
+                style={{ animationDelay: `${index * 0.2}s` }}
+                className='animate-on-scroll bg-white/70 hover:shadow-md transition hover:-translate-y-2 h-auto w-80 rounded-xl sm:w-full p-1 '>
                 <a target="blank" href={projects.liveUrl}><img className="w-full z-10 object-cover h-48 rounded-xl shadow border-b-2 border-brand-brown" src={projects.imgUrl} alt="ProjectImg" /></a>
 
 

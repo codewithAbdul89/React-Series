@@ -33,3 +33,14 @@
 .animate-slide-down {
     animation: slide-down 0.3s ease-in-out;
 }
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}

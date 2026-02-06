@@ -118,7 +118,7 @@ export const mapFirebaseError = (error) => {
 
 
 
-export  const LoadingFunction = () => {
+export  const LoadingFunction = () => {    
     return (
         <div className='w-full h-screen z-[1000] animation-spin flex justify-center items-center fixed  bg-opacity-80 bg-black '>
             <div className='animate-spin w-16 h-16 border-[3px] border-white border-t-blue-500 rounded-full'>
