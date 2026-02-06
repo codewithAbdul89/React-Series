@@ -31,6 +31,7 @@ function ForgetPassword() {
                 message: err.message,
                 type: err.type,
             }));
+            console.log(error)
         } finally {
             dispatch(clearLoading())
         }
