@@ -5,11 +5,16 @@ import { setLoading, clearLoading, showPopup } from "../Components/PopUpSlice"
 import { sendPasswordResetEmail } from "firebase/auth"
 import { useDispatch } from "react-redux"
 import { mapFirebaseError } from "./Popup"
+import { useEffect } from "react"
+
 
 function ForgetPassword() {
     const dispatch = useDispatch()
+    useEffect(() => {
+        setFocus("email")
+    }, [])
 
-    const { formState: { isSubmitting, errors, isValid }, register, handleSubmit, reset } = useForm({
+    const { formState: { isSubmitting, errors, isValid }, register, handleSubmit, reset ,setFocus } = useForm({
         mode: "onChange",
     })
 
@@ -62,8 +67,7 @@ function ForgetPassword() {
                                 pattern: {
                                     value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                                     message: "Email is not validate."
-                                }
-
+                                },
                             })}
                         />
                         {errors.email && <p className="text-red-500 px-3 mb-3">{errors.email.message}</p>}

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useForm } from "react-hook-form"
 import Input from "./Input"
 import { useDispatch } from 'react-redux'
@@ -13,14 +13,13 @@ import { Link } from 'react-router-dom'
 import { svg1, svg2 } from '../assets/Icons'
 function LoginPage() {
 
-    const { register, handleSubmit, formState: { isSubmitting, errors } } = useForm({
+    const { register, handleSubmit, formState: { isSubmitting, errors },setFocus } = useForm({
         mode: "onSubmit",
         reValidateMode: "onChange"
     })
     const [passwordIcon, setPasswordIcon] = useState(false)
-    const InputRef = useRef()
     useEffect(() => {
-        InputRef.current?.focus()
+      setFocus("email")
     }, [])
     const navigate = useNavigate()
     const dispatch = useDispatch()
@@ -84,10 +83,10 @@ function LoginPage() {
                                     }
                                 })}
                                 placeholder="abchello@gmail.com"
-                                ref={(e) => {
-                                    register("email").ref(e)
-                                    InputRef.current = e
-                                }}
+                                // ref={(e) => {
+                                //     register("email").ref(e)
+                                //     InputRef.current = e
+                                // }}
                                 className={`  shadow-2xl shadow-cyan-500  p-1 py-[5px] border-[1.5px] rounded-lg ${errors.email ? "border-red-500 focus:outline-red-500" : "border-gray-300 focus:outline-cyan-400"}`}
                             />
                             {errors.email && <p className='text-red-500 sm:text-sm pl-1'>{errors.email.message}</p>}

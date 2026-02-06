@@ -12,18 +12,17 @@ import { svg1, svg2 } from '../assets/Icons'
 import { Link, useNavigate } from 'react-router-dom'
 
 function SignUpPage() {
-    const { handleSubmit, register, watch, formState: { isSubmitting, errors }, reset } = useForm({
+    const { handleSubmit, register, watch, setFocus, formState: { isSubmitting, errors }, reset } = useForm({
         mode: "onSubmit",
         reValidateMode: "onChange"
     })
 
+    useEffect(() => {
+        setFocus("userName")
+    }, [])
+
     const password = watch("password")
     const navigate = useNavigate()
-
-    const inputRef = useRef()
-    useEffect(() => {
-        inputRef.current?.focus()
-    }, [])
 
     const [passwordIcon, setPasswordIcon] = useState(false)
     const [confirmPasswordIcon, setConfirmPasswordIcon] = useState(false)
@@ -108,10 +107,6 @@ function SignUpPage() {
                                         minLength: { value: 3, message: "At least three letters is neccessary." },
                                         maxLength: { value: 25, message: "UserName should be less then 26 letters." }
                                     })}
-                                    ref={(e) => {
-                                        inputRef.current = e
-                                        register("userName").ref(e)
-                                    }}
                                     placeholder="abc"
                                     className={`w-full placeholder:text-gray-400 border-[1.5px] caret-teal-500   shadow-2xl  shadow-teal-200  rounded-lg px-1 py-[5px] ${errors.userName ? "border-red-500 focus:outline-red-500 " : "border-gray-300 focus:outline-teal-400"}`} />
                                 {errors.userName && <p className='pl-1 text-sm text-red-400'>{errors.userName.message}</p>}
